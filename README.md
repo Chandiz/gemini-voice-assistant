@@ -1,5 +1,8 @@
 # Gemini Voice Assistant (Raspberry Pi)
 
+⚠️ This project is archived.
+Built as a learning prototype for Raspberry Pi voice assistants.
+
 A simple voice-based AI assistant built on a Raspberry Pi using Google's Gemini API.
 The device listens through a USB microphone, sends speech to Gemini, and prints responses in real time.
 
