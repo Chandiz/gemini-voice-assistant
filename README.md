@@ -1,30 +1,49 @@
-# Gemini Voice Assistant (Raspberry Pi)
+# Gemini Voice Assistant (Raspberry Pi Edge Prototype)
 
-⚠️ This project is archived.
-Built as a learning prototype for Raspberry Pi voice assistants.
+An edge-based voice assistant prototype built on Raspberry Pi 3B+ using Google Gemini API.
 
-A simple voice-based AI assistant built on a Raspberry Pi using Google's Gemini API.
-The device listens through a USB microphone, sends speech to Gemini, and prints responses in real time.
+This project demonstrates:
 
-> ⚠️ This is a learning / prototype project, not a production assistant.
-
----
-
-## Features
-
-- Continuous voice interaction
-- USB microphone support
-- Google Gemini API integration
-- Lightweight (Raspberry Pi 3B+ compatible)
+- Real-time speech-to-text input
+- API-based LLM interaction
+- Lightweight edge device deployment
+- Continuous voice interaction loop
+- Python-based system integration
 
 ---
 
-## Requirements
+## Architecture Overview
+
+USB Microphone  
+→ Speech Recognition  
+→ Google Gemini API (gemini-2.5-flash)  
+→ Real-time text response  
+
+Designed as a minimal edge AI system running on constrained hardware.
+
+---
+
+## Purpose
+
+This project was built as an infrastructure-focused prototype to explore:
+
+- AI integration on edge devices
+- Lightweight LLM usage
+- Python-based automation workflows
+- API key management via environment variables
+- Raspberry Pi system constraints and optimization
+
+⚠️ This is a learning / experimentation project — not a production assistant.
+
+---
+
+## Technical Stack
 
 - Python 3.9+
-- Google Gemini API key
-- USB microphone
-- Internet connection
+- Google Gemini API
+- SpeechRecognition library
+- Raspberry Pi OS
+- USB Microphone input
 
 ---
 
@@ -32,20 +51,5 @@ The device listens through a USB microphone, sends speech to Gemini, and prints 
 
 ```bash
 pip install -r requirements.txt
-
-## Set your API key:
-
 export GOOGLE_API_KEY="YOUR_API_KEY"
-
-## Run
-
-python3 assistant.py 2>/dev/null
-
-
-## Notes
-
-Uses the gemini-2.5-flash model (free tier has request limits)
-
-Audio output (text-to-speech) and LEDs were intentionally removed
-
-Designed for experimentation and learning
+python3 assistant.py
